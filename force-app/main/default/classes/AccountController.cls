@@ -5,15 +5,15 @@ public with sharing class AccountController {
      */
     public AccountController(ApexPages.StandardController controller) {
         // Get the last name from the url
-        String accountNumber = ApexPages.currentPage().getParameters().get('accountNumber');
+        //String accountNumber = ApexPages.currentPage().getParameters().get('accountNumber');
 
-        if (accountNumber != null) {
+        //if (accountNumber != null) {
             // Query the object
-            Account account = [SELECT ID FROM Account WHERE AccountNumber = :accountNumber LIMIT 1];
+            //Account account = [SELECT ID FROM Account WHERE AccountNumber = :accountNumber LIMIT 1];
 
             // this will set the Id, so now you can use the standard controller and just reference fields on the page
-            ApexPages.currentPage().getParameters().put('id', account.Id);
-        }
+            //ApexPages.currentPage().getParameters().put('id', account.Id);
+        //}
     }
 
     public Pagereference goToList(){

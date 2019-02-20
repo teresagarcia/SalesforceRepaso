@@ -14,7 +14,7 @@
 
       <!-- Button Section -->
       <apex:pageBlockButtons location="bottom">
-        <apex:commandButton value="Add Member" action="{!save}" />
+        <apex:commandButton value="Save Contact" action="{!save}" />
       </apex:pageBlockButtons>
     </apex:pageBlock>
   </apex:form>
@@ -24,7 +24,7 @@
     <apex:commandButton value="Go to List" action="{!goToList}" />
 </apex:form>
 <apex:form>
-    <apex:commandButton value="Go to Account" action="{!goToContact}" />
+    <apex:commandButton value="Go to Account Form" action="{!goToAccount}" />
 </apex:form>
 
 </apex:page>

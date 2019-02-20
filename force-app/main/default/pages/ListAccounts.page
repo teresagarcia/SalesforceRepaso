@@ -5,14 +5,15 @@
   <apex:pageBlock>
     <apex:pageBlockTable value="{!accounts}" var="account">
       <apex:column value="{!account.ID}" />
-      <apex:column value="{!account.Number}" />
+      <apex:column value="{!account.AccountNumber}" />
+      <apex:column value="{!account.Site}" />
     </apex:pageBlockTable>
   </apex:pageBlock>
 
   <apex:pageBlock>
     <apex:pageBlockSection>
       <apex:dataList value="{!accounts}" var="account" type="1">
-        {!account.ID} {!account.Number}
+        {!account.ID} {!account.AccountNumber} {!account.Site}
       </apex:dataList>
     </apex:pageBlockSection>
   </apex:pageBlock>

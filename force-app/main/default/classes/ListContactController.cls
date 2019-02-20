@@ -20,7 +20,12 @@ public class ListContactController {
         return (List<Contact>) setConTacts.getRecords();
     }
 
-  public Pagereference goToAccount(){
+    public Pagereference goToContact(){
+        PageReference pr=Page.AddContact;
+        return pr;
+    }
+
+      public Pagereference goToAccount(){
         PageReference pr=Page.AddAccount;
         return pr;
     }

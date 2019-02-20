@@ -6,7 +6,7 @@ public class ListAccountController {
             if(setAccount == null) {
                 setAccount = new ApexPages.StandardSetController(
                     Database.getQueryLocator(
-                        [SELECT ID, AccountNumber FROM Account]
+                        [SELECT AccountNumber, Site FROM Account]
                     )
                 );
             }
@@ -22,6 +22,11 @@ public class ListAccountController {
 
       public Pagereference goToContact(){
         PageReference pr=Page.AddContact;
+        return pr;
+    }
+
+      public Pagereference goToAccount(){
+        PageReference pr=Page.AddAccount;
         return pr;
     }
 }

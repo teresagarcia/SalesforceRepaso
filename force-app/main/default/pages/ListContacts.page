@@ -12,7 +12,7 @@
   <apex:pageBlock>
     <apex:pageBlockSection>
       <apex:dataList value="{!contacts}" var="contact" type="1">
-        {!contact.FirstName}
+        {!contact.FirstName} {!contact.LastName}
       </apex:dataList>
     </apex:pageBlockSection>
   </apex:pageBlock>
