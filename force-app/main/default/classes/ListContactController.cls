@@ -1,4 +1,4 @@
-public class ListController {
+public class ListContactController {
  
 
     public ApexPages.StandardSetController setConTacts {
@@ -19,4 +19,10 @@ public class ListController {
     public List<Contact> getcontacts() {
         return (List<Contact>) setConTacts.getRecords();
     }
+
+  public Pagereference goToAccount(){
+        PageReference pr=Page.AddAccount;
+        return pr;
+    }
+
 }

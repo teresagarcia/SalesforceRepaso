@@ -1,4 +1,4 @@
-<apex:page controller="ListController">
+<apex:page controller="ListContactController">
   <!-- Page Header -->
   <apex:sectionHeader title="Contact List" subtitle="List all contacts" />
 
@@ -16,4 +16,8 @@
       </apex:dataList>
     </apex:pageBlockSection>
   </apex:pageBlock>
+
+  <apex:form>
+    <apex:commandButton value="Go to Contact Form" action="{!goToContact}" />
+</apex:form>
 </apex:page>

@@ -1,13 +1,9 @@
-public with sharing class DemoController {
-    /**
-     * An empty constructor for the testing
-     */
-    public DemoController() {}
+public with sharing class ContactController {
 
     /**
      * Set the contact for the page using the lastName parameter, if there is one
      */
-    public DemoController(ApexPages.StandardController controller) {
+    public ContactController(ApexPages.StandardController controller) {
         // Get the last name from the url
         String lastName = ApexPages.currentPage().getParameters().get('lastName');
 
@@ -20,10 +16,14 @@ public with sharing class DemoController {
         }
     }
 
-    /**
-     * Get the version of the SFDX demo app
-     */
-    public String getAppVersion() {
-        return '1.0.0';
+    public Pagereference goToList(){
+        PageReference pr=Page.ListContacts;
+        return pr;
     }
+
+      public Pagereference goToAccount(){
+        PageReference pr=Page.AddAccount;
+        return pr;
+    }
+
 }
