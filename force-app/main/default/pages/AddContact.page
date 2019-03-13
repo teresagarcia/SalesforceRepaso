@@ -1,20 +1,20 @@
-<apex:page standardController="Contact" extensions="ContactController">
+<apex:page standardController="Campaign" extensions="CampaignController">
 
 
   <!-- Begin Form -->
   <apex:form >
-    <apex:pageBlock title="add contact" mode="edit">
+    <apex:pageBlock title="add campaign" mode="edit">
      
 
       <!-- Fields -->
-      <apex:pageBlockSection columns="3" showHeader="true" title="Membership Status">
-        <apex:inputField styleClass="firstName" value="{!contact.FirstName}" required="true" />
-        <apex:inputField styleClass="lastName" value="{!contact.LastName}"  required="true" />
+      <apex:pageBlockSection columns="2" showHeader="true" title="Membership Status">
+        <apex:inputField value="{!campaign.Name}" required="true" />
+        <apex:inputField value="{!campaign.BudgetedCost}"  required="true" />
       </apex:pageBlockSection>
 
       <!-- Button Section -->
       <apex:pageBlockButtons location="bottom">
-        <apex:commandButton value="Save Contact" action="{!save}" />
+        <apex:commandButton value="Save Campaign" action="{!save}" />
       </apex:pageBlockButtons>
     </apex:pageBlock>
   </apex:form>
@@ -22,9 +22,6 @@
 
 <apex:form>
     <apex:commandButton value="Go to List" action="{!goToList}" />
-</apex:form>
-<apex:form>
-    <apex:commandButton value="Go to Account Form" action="{!goToAccount}" />
 </apex:form>
 
 </apex:page>
