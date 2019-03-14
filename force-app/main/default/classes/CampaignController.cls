@@ -6,12 +6,12 @@ public with sharing class CampaignController {
     }
 
     public Pagereference goToList(){
-        PageReference pr=Page.ListContacts;
+        PageReference pr=Page.ListCampaigns;
         return pr;
     }
 
-      public Pagereference goToAccount(){
-        PageReference pr=Page.AddAccount;
+      public Pagereference goToCampaign(){
+        PageReference pr=Page.AddCampaign;
         return pr;
     }
 

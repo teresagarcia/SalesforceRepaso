@@ -1,0 +1,23 @@
+<apex:page controller="ListCampaignController">
+  <!-- Page Header -->
+  <apex:sectionHeader title="Campaign List" subtitle="List all campaigns" />
+
+  <apex:pageBlock>
+    <apex:pageBlockTable value="{!campaigns}" var="campaign">
+      <apex:column value="{!campaign.Name}" />
+      <apex:column value="{!campaign.BudgetedCost}" />
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+
+  <apex:pageBlock>
+    <apex:pageBlockSection>
+      <apex:dataList value="{!campaigns}" var="campaign" type="1">
+        {!campaign.Name} {!campaign.BudgetedCost}
+      </apex:dataList>
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+
+  <apex:form>
+    <apex:commandButton value="Go to Campaign Form" action="{!goToCampaign}" />
+</apex:form>
+</apex:page>
